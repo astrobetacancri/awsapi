@@ -23,11 +23,13 @@ Create an API endpoint using AWS API Gateway connecting to Dynamo DB.
 POST method 
 - New Child Resource 
 -- /comments/POST method
--- Integration Type : AWS Service Proxy
--- AWS Region: ca-central-1 
--- AWS Service: DynamoDB
--- HTTP method: POST
--- Action: PutItem 
+--- Integration Type : AWS Service Proxy
+--- AWS Region: ca-central-1 
+--- AWS Service: DynamoDB
+--- HTTP method: POST
+--- Action: PutItem 
+--- Execution role: Attach IAM role ARN 
+--- Mapping templates: https://github.com/astrobetacancri/awsapi/blob/master/POST_Mapping_Template
 
 GET method     
 -- /comments/{pageid}/GET method    
@@ -37,7 +39,8 @@ GET method
 --- AWS Service: DynamoDB
 --- HTTP method: POST
 --- Action: Scan 
---- Mapping templates: 
+--- Execution role: Attach IAM role ARN 
+--- Mapping templates: https://github.com/astrobetacancri/awsapi/blob/master/GET_Mapping_Template
 
     
 Test API Gateway : 
