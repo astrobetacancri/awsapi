@@ -52,7 +52,7 @@ POST method
      - Apply [GET Mapping Templates](GET_Response_Mapping_Template) to Integration Response
 
 
-Test API Gateway : 
+## Test API Gateway : 
 - GET URL: 
  - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/{pageid}
  - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/1
