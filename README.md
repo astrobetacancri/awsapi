@@ -11,6 +11,7 @@ Develop a simple RESTful API (using your language of choice) that interacts with
 - Primary Key 
 - Create Index with Primary Key and Index Name 
 - Create New Index (pageId-Index-copy) with added createdate column 
+- DynamoDB support [Data type](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html) restricted to All Number type, Boolean, String, Date (String)
 
 2. Create IAM role with policies: 
 - Execution role: 
