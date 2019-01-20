@@ -1,4 +1,5 @@
 # AWS API Gateway & DynamoDB 
+Develop a simple RESTful API (using your language of choice) that interacts with a backend database of your choice as the backend permanent data store. The API shall have one endpoint supporting a POST and GET method allowing the user to create objects via POST and query for the objects via GETs. The object being created shall contain a mixture of primitive attributes (e.g., date/time, string, int, float, Boolean, etc) to support the REST API’s query capabilities.
 
 ## This practice follows the AWS blog: 
 [Using Amazon API Gateway as a proxy for DynamoDB](https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-as-a-proxy-for-dynamodb/)
