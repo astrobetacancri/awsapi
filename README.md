@@ -55,7 +55,7 @@ POST method
 ## Test API Gateway : 
 - GET URL: 
  - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/{pageid}
- - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/1
+ - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/test/comments/UrtheCast1
 
 Use Insomnia to test POST, update to DynamoDB: 
 - POST URL: 
