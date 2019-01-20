@@ -5,7 +5,10 @@
             "commentId": "$elem.commentId.S",
             "userName": "$elem.userName.S",
             "message": "$elem.message.S",
-            "createtime": "$elem.createtime.S"
+            "createtime": "$elem.createtime.S", 
+            "Boolean": $elem.Boolean.BOOL, 
+            "int": "$elem.int.N", 
+            "float": "$elem.float.N"
         }#if($foreach.hasNext),#end
 	#end
     ]
