@@ -9,6 +9,7 @@ Create an API endpoint using AWS API Gateway connecting to Dynamo DB.
 - Create Table 
 - Primary Key 
 - Create Index with Primary Key and Index Name 
+- Create New Index (pageId-Index-copy) with added createdate column 
 
 2. Create IAM role with policies: 
 -- Execution role: 
