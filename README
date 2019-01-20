@@ -17,26 +17,10 @@ Create an API endpoint using AWS API Gateway connecting to Dynamo DB.
     Trusted entities: 
     dax.amazonaws.com
     apigateway.amazonaws.com
-    
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": [
-          "dynamodb.amazonaws.com",
-          "dax.amazonaws.com",
-          "apigateway.amazonaws.com"
-        ]
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-    
+    https://github.com/astrobetacancri/awsapi/blob/master/trust_relationship     
 
 3. Create API in API Gateway 
+POST method 
 - New Child Resource 
 -- /comments/POST method
 -- Integration Type : AWS Service Proxy
@@ -45,7 +29,7 @@ Create an API endpoint using AWS API Gateway connecting to Dynamo DB.
 -- HTTP method: POST
 -- Action: PutItem 
 
-    
+GET method     
 -- /comments/{pageid}/GET method    
 -- GET Integration Request: 
 --- Integration type: AWS Service 
@@ -56,10 +40,11 @@ Create an API endpoint using AWS API Gateway connecting to Dynamo DB.
 --- Mapping templates: 
 
     
-
+Test API Gateway : 
 GET URL: 
 https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/5
 
+Use Insomnia to test POST, update to DynamoDB: 
 POST URL: 
 https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/
 
