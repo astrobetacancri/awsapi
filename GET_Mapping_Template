@@ -1,0 +1,9 @@
+{
+    "TableName": "Comments",
+    "IndexName": "pageId-index",
+    "FilterExpression" : "pageId = :val", 
+    "ExpressionAttributeValues": {
+    ":val":{"S":"$input.params('pageid')"}
+    }
+
+}
