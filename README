@@ -43,10 +43,17 @@ GET method
 --- Execution role: Attach IAM role ARN 
 --- Mapping templates: https://github.com/astrobetacancri/awsapi/blob/master/GET_Mapping_Template
 
-    
+-- GET Method Request: 
+--- Request Paths: Name = pageid 
+
+-- GET Integration Response:
+--- Mapping Templates: https://github.com/astrobetacancri/awsapi/blob/master/GET_Response_Mapping_Template
+
+
 Test API Gateway : 
 GET URL: 
-https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/5
+https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/{pageid}
+https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/1
 
 Use Insomnia to test POST, update to DynamoDB: 
 POST URL: 
@@ -56,5 +63,9 @@ POST JSON Body:
 {
   "pageId":   "5",
   "userName": "Sandra",
-  "message":  "This is a new message"
+  "message":  "This is a new message", 
+  "createtime": "Timestamp - ISO-8601"
 }
+
+* use Insomnia Timestamp 
+
