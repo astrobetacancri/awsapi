@@ -12,8 +12,8 @@
 - Create New Index (pageId-Index-copy) with added createdate column 
 
 2. Create IAM role with policies: 
--- Execution role: 
---- IAM role with 
+- Execution role: 
+    - IAM role with 
     DynamoDB access and API Gateway Invoke Full Access
     Trusted entities: 
     dax.amazonaws.com
@@ -23,31 +23,31 @@
 3. Create API in API Gateway 
 POST method 
 - New Child Resource 
--- /comments/POST method
---- Integration Type : AWS Service Proxy
---- AWS Region: ca-central-1 
---- AWS Service: DynamoDB
---- HTTP method: POST
---- Action: PutItem 
---- Execution role: Attach IAM role ARN 
---- Apply [POST Mapping templates](POST_Mapping_Template) to Integration Request
+  - /comments/POST method
+        - Integration Type : AWS Service Proxy
+        - AWS Region: ca-central-1 
+        - AWS Service: DynamoDB
+        - HTTP method: POST
+        - Action: PutItem 
+        - Execution role: Attach IAM role ARN 
+        - Apply [POST Mapping templates](POST_Mapping_Template) to Integration Request
 
-GET method     
--- /comments/{pageid}/GET method    
--- GET Integration Request: 
---- Integration type: AWS Service 
---- AWS Region: ca-central-1 
---- AWS Service: DynamoDB
---- HTTP method: POST
---- Action: Scan 
---- Execution role: Attach IAM role ARN 
---- Apply [GET Mapping templates](GET_Mapping_Template) to Integration Request
+- GET method     
+    -  /comments/{pageid}/GET method    
+    - GET Integration Request: 
+     - Integration type: AWS Service 
+     - AWS Region: ca-central-1 
+     - AWS Service: DynamoDB
+     - HTTP method: POST
+     - Action: Scan 
+     - Execution role: Attach IAM role ARN 
+     - Apply [GET Mapping templates](GET_Mapping_Template) to Integration Request
 
--- GET Method Request: 
---- Request Paths: Name = pageid 
+    - GET Method Request: 
+     - Request Paths: Name = pageid 
 
--- GET Integration Response:
---- Apply [GET Mapping Templates](GET_Response_Mapping_Template) to Integration Response
+    - GET Integration Response:
+     - Apply [GET Mapping Templates](GET_Response_Mapping_Template) to Integration Response
 
 
 Test API Gateway : 
