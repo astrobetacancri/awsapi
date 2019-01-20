@@ -5,7 +5,6 @@
       "Effect": "Allow",
       "Principal": {
         "Service": [
-          "dynamodb.amazonaws.com",
           "dax.amazonaws.com",
           "apigateway.amazonaws.com"
         ]
