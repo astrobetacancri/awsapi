@@ -10,14 +10,7 @@ Create an API endpoint using AWS API Gateway connecting to Dynamo DB.
 - Primary Key 
 - Create Index with Primary Key and Index Name 
 
-2. Create API in API Gateway 
-- New Child Resource 
--- /comments/POST
--- Integration Type : AWS Service Proxy
--- AWS Region: ca-central-1 
--- AWS Service: DynamoDB
--- HTTP method: POST
--- Action: PutItem 
+2. Create IAM role with policies: 
 -- Execution role: 
 --- IAM role with 
     DynamoDB access and API Gateway Invoke Full Access
@@ -41,6 +34,28 @@ Create an API endpoint using AWS API Gateway connecting to Dynamo DB.
     }
   ]
 }
+    
+
+3. Create API in API Gateway 
+- New Child Resource 
+-- /comments/POST method
+-- Integration Type : AWS Service Proxy
+-- AWS Region: ca-central-1 
+-- AWS Service: DynamoDB
+-- HTTP method: POST
+-- Action: PutItem 
+
+    
+-- /comments/{pageid}/GET method    
+-- GET Integration Request: 
+--- Integration type: AWS Service 
+--- AWS Region: ca-central-1 
+--- AWS Service: DynamoDB
+--- HTTP method: POST
+--- Action: Scan 
+--- Mapping templates: 
+
+    
 
 GET URL: 
 https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/5
