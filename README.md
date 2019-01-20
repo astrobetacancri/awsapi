@@ -23,9 +23,8 @@ Develop a simple RESTful API (using your language of choice) that interacts with
        - [Trusted entities](trust_relationship)
 
 3. Create API in API Gateway (CommentsApi)
-POST method 
-- New Child Resource 
-  - /comments/POST method
+- POST method  
+  - NEW Child Resource /comments/POST method
    - Integration Type : AWS Service Proxy
    - AWS Region: ca-central-1 
    - AWS Service: DynamoDB
@@ -35,7 +34,7 @@ POST method
    - Apply [POST Mapping templates](POST_Mapping_Template) to Integration Request
 
 - GET method     
-    -  /comments/{pageid}/GET method    
+    -  NEW Child Resource /comments/{pageid}/GET method    
     - GET Integration Request: 
      - Integration type: AWS Service 
      - AWS Region: ca-central-1 
