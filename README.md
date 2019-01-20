@@ -22,7 +22,7 @@ Develop a simple RESTful API (using your language of choice) that interacts with
       - apigateway.amazonaws.com
        - [Trusted entities](trust_relationship)
 
-3. Create API in API Gateway 
+3. Create API in API Gateway (CommentsApi)
 POST method 
 - New Child Resource 
   - /comments/POST method
