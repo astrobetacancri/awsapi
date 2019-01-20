@@ -1,7 +1,7 @@
-# This practice follows the AWS blog: 
+# AWS API Gateway & DynamoDB 
 
-## Source
-(Using Amazon API Gateway as a proxy for DynamoDB)[https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-as-a-proxy-for-dynamodb/]
+## This practice follows the AWS blog: 
+[Using Amazon API Gateway as a proxy for DynamoDB](https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-as-a-proxy-for-dynamodb/)
 
 ## Create an API endpoint using AWS API Gateway connecting to Dynamo DB. 
 
@@ -18,7 +18,7 @@
     Trusted entities: 
     dax.amazonaws.com
     apigateway.amazonaws.com
-    https://github.com/astrobetacancri/awsapi/blob/master/trust_relationship     
+    [Trusted entities](trust_relationship)
 
 3. Create API in API Gateway 
 POST method 
@@ -30,7 +30,7 @@ POST method
 --- HTTP method: POST
 --- Action: PutItem 
 --- Execution role: Attach IAM role ARN 
---- Mapping templates: https://github.com/astrobetacancri/awsapi/blob/master/POST_Mapping_Template
+--- Apply [POST Mapping templates](POST_Mapping_Template) to Integration Request
 
 GET method     
 -- /comments/{pageid}/GET method    
@@ -41,13 +41,13 @@ GET method
 --- HTTP method: POST
 --- Action: Scan 
 --- Execution role: Attach IAM role ARN 
---- Mapping templates: https://github.com/astrobetacancri/awsapi/blob/master/GET_Mapping_Template
+--- Apply [GET Mapping templates](GET_Mapping_Template) to Integration Request
 
 -- GET Method Request: 
 --- Request Paths: Name = pageid 
 
 -- GET Integration Response:
---- Mapping Templates: https://github.com/astrobetacancri/awsapi/blob/master/GET_Response_Mapping_Template
+--- Apply [GET Mapping Templates](GET_Response_Mapping_Template) to Integration Response
 
 
 Test API Gateway : 
@@ -59,7 +59,6 @@ Use Insomnia to test POST, update to DynamoDB:
 POST URL: 
 https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/
 
-POST JSON Body: 
-https://github.com/astrobetacancri/awsapi/blob/master/POST_JSON_body 
-(* use Insomnia Timestamp)
+Enter the sample [POST JSON Body](POST_JSON_body) in Insomia POST JSON body
+(* with Insomnia Timestamp)
 
