@@ -12,6 +12,9 @@
         },
         "message": {
             "S": "$input.path('$.message')"
+        }, 
+        "createtime": {
+            "S": "$input.path('$.createtime')"
         }
     }
 }
