@@ -15,6 +15,15 @@
         }, 
         "createtime": {
             "S": "$input.path('$.createtime')"
-        }
+        }, 
+        "float": {
+            "N": "$input.path('$.float')"
+        }, 
+        "int": {
+            "N": "$input.path('$.int')"
+        },         
+        "Boolean": {
+            "BOOL": $input.path('$.Boolean')
+        }         
     }
 }
