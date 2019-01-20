@@ -34,7 +34,7 @@ Develop a simple RESTful API (using your language of choice) that interacts with
    - Apply [POST Mapping templates](POST_Mapping_Template) to Integration Request
 
 - GET method     
-    -  NEW Child Resource /comments/{pageid}/GET method    
+    - NEW Child Resource /comments/{pageid}/GET method    
     - GET Integration Request: 
      - Integration type: AWS Service 
      - AWS Region: ca-central-1 
@@ -43,12 +43,10 @@ Develop a simple RESTful API (using your language of choice) that interacts with
      - Action: Scan 
      - Execution role: Attach IAM role ARN 
      - Apply [GET Mapping templates](GET_Mapping_Template) to Integration Request
-
-    - GET Method Request: 
-     - Request Paths: Name = pageid 
-
-    - GET Integration Response:
-     - Apply [GET Mapping Templates](GET_Response_Mapping_Template) to Integration Response
+     - GET Method Request: 
+      - Request Paths: Name = pageid 
+     - GET Integration Response:
+      - Apply [GET Mapping Templates](GET_Response_Mapping_Template) to Integration Response
 
 
 ## Test API Gateway : 
