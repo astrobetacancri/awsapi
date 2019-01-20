@@ -1,10 +1,10 @@
 {
   "pageId":   "TestBOO",
   "userName": "Felix",
-	"message": "BOOL Int Float is Deployed ", 
-	"createtime": " 9080900", 
-	 "int": "6",
-   "float": "983.14", 
-	 "Boolean": true
+  "message": "BOOL Int Float is Deployed ", 
+  "createtime": " 9080900", 
+  "int": "6", 
+  "float": "983.14", 
+  "Boolean": true
 }
 
