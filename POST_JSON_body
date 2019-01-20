@@ -1,5 +1,10 @@
 {
-  "pageId":   "5",
-  "userName": "Sandra",
-  "message":  "This is a new message"
+  "pageId":   "TestBOO",
+  "userName": "Felix",
+	"message": "BOOL Int Float is Deployed ", 
+	"createtime": " 9080900", 
+	 "int": "6",
+   "float": "983.14", 
+	 "Boolean": true
 }
+
