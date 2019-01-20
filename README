@@ -61,11 +61,15 @@ https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/
 
 POST JSON Body: 
 {
-  "pageId":   "5",
-  "userName": "Sandra",
-  "message":  "This is a new message", 
-  "createtime": "Timestamp - ISO-8601"
+  "pageId":   "TestBOO",
+  "userName": "Felix",
+	"message": "BOOL Int Float is Deployed ", 
+	"createtime": " 9080900", 
+	 "int": "6",
+   "float": "983.14", 
+	 "Boolean": true
 }
+
 
 * use Insomnia Timestamp 
 
