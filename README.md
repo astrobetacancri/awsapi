@@ -14,23 +14,23 @@
 2. Create IAM role with policies: 
 - Execution role: 
     - IAM role with 
-    DynamoDB access and API Gateway Invoke Full Access
-    Trusted entities: 
-    dax.amazonaws.com
-    apigateway.amazonaws.com
-    [Trusted entities](trust_relationship)
+     - DynamoDB access and API Gateway Invoke Full Access
+     - Trusted entities: 
+      - dax.amazonaws.com
+      - apigateway.amazonaws.com
+       - [Trusted entities](trust_relationship)
 
 3. Create API in API Gateway 
 POST method 
 - New Child Resource 
   - /comments/POST method
-        - Integration Type : AWS Service Proxy
-        - AWS Region: ca-central-1 
-        - AWS Service: DynamoDB
-        - HTTP method: POST
-        - Action: PutItem 
-        - Execution role: Attach IAM role ARN 
-        - Apply [POST Mapping templates](POST_Mapping_Template) to Integration Request
+   - Integration Type : AWS Service Proxy
+   - AWS Region: ca-central-1 
+   - AWS Service: DynamoDB
+   - HTTP method: POST
+   - Action: PutItem 
+   - Execution role: Attach IAM role ARN 
+   - Apply [POST Mapping templates](POST_Mapping_Template) to Integration Request
 
 - GET method     
     -  /comments/{pageid}/GET method    
@@ -51,13 +51,13 @@ POST method
 
 
 Test API Gateway : 
-GET URL: 
-https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/{pageid}
-https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/1
+- GET URL: 
+ - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/{pageid}
+ - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/1
 
 Use Insomnia to test POST, update to DynamoDB: 
-POST URL: 
-https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/
+- POST URL: 
+ - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/
 
 Enter the sample [POST JSON Body](POST_JSON_body) in Insomia POST JSON body
 (* with Insomnia Timestamp)
