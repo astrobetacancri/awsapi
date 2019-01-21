@@ -56,6 +56,6 @@ Use Insomnia to test POST, update to DynamoDB:
 - POST URL: 
  - https://67fy3si1z8.execute-api.ca-central-1.amazonaws.com/Live/comments/
 
-Enter the sample [POST JSON Body](POST_JSON_body) in Insomia POST JSON body
+Enter the sample [POST JSON Body](POST_JSON_body.json) in Insomia POST JSON body
 (* with Insomnia Timestamp)
 
